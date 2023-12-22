@@ -1,8 +1,9 @@
 """
-Support for controlling a Cambridge Audio CXA amplifier over a serial connection.
+Support for controlling a Parasound 200 pre amplifier over a serial connection.
 
 For more details about this platform, please refer to the documentation at
 https://github.com/lievencoghe/cambridge_audio_cxa
+https://github.com/raghavrithvik/parasound_200pre
 """
 
 import logging
@@ -34,7 +35,7 @@ import homeassistant.helpers.config_validation as cv
 
 import homeassistant.loader as loader
 
-__version__ = "0.4"
+__version__ = "0.1"
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -56,7 +57,7 @@ SUPPORT_CXA_WITH_CXN = (
     | SUPPORT_VOLUME_STEP
 )
 
-DEFAULT_NAME = "Cambridge Audio CXA"
+DEFAULT_NAME = "Parasound 200pro"
 DEVICE_CLASS = "receiver"
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
