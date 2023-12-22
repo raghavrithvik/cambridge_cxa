@@ -1,0 +1,7 @@
+{
+    "name": "Parasound 200pre",
+    "domains": ["media_player"],
+    "render_readme": true,
+    "iot_class": "Local Push",
+    "homeassistant": "2023.12.0"
+}
