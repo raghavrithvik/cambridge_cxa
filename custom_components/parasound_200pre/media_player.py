@@ -70,9 +70,9 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
 )
 
 NORMAL_INPUTS_CXA61 = {
-    "A1" : "#03,04,00",
-    "A2" : "#03,04,01",
-    "A3" : "#03,04,02",
+    "A1" : "57,20,31,20,32,20,36,0D",
+    "A2" : "57,20,31,20,32,20,37,0D",
+    "A3" : "57,20,31,20,32,20,38,0D",
     "A4" : "#03,04,03",
     "D1" : "#03,04,04",
     "D2" : "#03,04,05",
@@ -96,9 +96,9 @@ NORMAL_INPUTS_CXA81 = {
 }
 
 NORMAL_INPUTS_AMP_REPLY_CXA61 = {
-    "#04,01,00" : "A1",
-    "#04,01,01" : "A2",
-    "#04,01,02" : "A3",
+    "*S1<CR>" : "A1",
+    "*S2<CR> " : "A2",
+    "*S3<CR>" : "A3",
     "#04,01,03" : "A4",
     "#04,01,04" : "D1",
     "#04,01,05" : "D2",
@@ -109,9 +109,9 @@ NORMAL_INPUTS_AMP_REPLY_CXA61 = {
 }
 
 NORMAL_INPUTS_AMP_REPLY_CXA81 = {
-    "#04,01,00" : "A1",
-    "#04,01,01" : "A2",
-    "#04,01,02" : "A3",
+    "*S1<CR>" : "A1",
+    "*S2<CR> " : "A2",
+    "*S3<CR>" : "A3",
     "#04,01,03" : "A4",
     "#04,01,04" : "D1",
     "#04,01,05" : "D2",
@@ -127,19 +127,19 @@ SOUND_MODES = {
     "B" : "#1,25,2"
 }
 
-AMP_CMD_GET_PWSTATE = "#01,01"
-AMP_CMD_GET_CURRENT_SOURCE = "#03,01"
-AMP_CMD_GET_MUTE_STATE = "#01,03"
+AMP_CMD_GET_PWSTATE = "52,20,31,20,31,0D"
+AMP_CMD_GET_CURRENT_SOURCE = "52,20,31,20,32,0D"
+AMP_CMD_GET_MUTE_STATE = "52,20,31,20,31,30,0D"
 
-AMP_CMD_SET_MUTE_ON = "#01,04,1"
-AMP_CMD_SET_MUTE_OFF = "#01,04,0"
-AMP_CMD_SET_PWR_ON = "#01,02,1"
-AMP_CMD_SET_PWR_OFF = "#01,02,0"
+AMP_CMD_SET_MUTE_ON = "57,20,31,20,31,30,20,32,0D"
+AMP_CMD_SET_MUTE_OFF = "57,20,31,20,31,30,20,31,0D"
+AMP_CMD_SET_PWR_ON = "57,20,31,20,31,20,32,0D"
+AMP_CMD_SET_PWR_OFF = "57,20,31,20,31,20,31,0D"
 
-AMP_REPLY_PWR_ON = "#02,01,1"
-AMP_REPLY_PWR_STANDBY = "#02,01,0"
-AMP_REPLY_MUTE_ON = "#02,03,1"
-AMP_REPLY_MUTE_OFF = "#02,03,0"
+AMP_REPLY_PWR_ON = "*G1<CR>"
+AMP_REPLY_PWR_STANDBY = "*G0<CR>"
+AMP_REPLY_MUTE_ON = "*M1<CR>"
+AMP_REPLY_MUTE_OFF = "*M0<CR>"
 
 def setup_platform(hass, config, add_devices, discovery_info=None):
     device = config.get(CONF_DEVICE)
