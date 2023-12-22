@@ -1,4 +1,4 @@
-# Home Assistant Custom Component for controlling Cambridge Audio CXA 61/81 amplifiers
+# Home Assistant Custom Component for controlling Parasound 200 pre amplifier with a Cambridge audio CXN V2 as a streamer - WIP
 
 For this component to work, you'll need to have a serial connection between your Cambridge CXA amplifier and your Home Assistant instance.
 This can be either a direct serial connection, or you could use a remote device like a Raspberry Pi to provide the serial connection from your CXA to your Home Assistant instance. 
