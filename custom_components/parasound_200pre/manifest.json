@@ -1,12 +1,12 @@
 {
-  "domain": "cambridge_cxa",
-  "name": "Cambridge Audio CXA",
-  "version": "0.4",
+  "domain": "parasound_200pre",
+  "name": "Pararound 200pre",
+  "version": "0.1",
   "integration_type": "entity",
-  "documentation": "https://github.com/lievencoghe/cambridge_cxa",
-  "issue_tracker": "https://github.com/lievencoghe/cambridge_cxa/issues",
+  "documentation": "https://github.com/raghavrithvik/parasound_200pre",
+  "issue_tracker": "https://github.com/raghavrithvik/parasound_200pre/issues",
   "requirements": ["serial"],
   "dependencies": [],
-  "codeowners": ["@lievencoghe"],
+  "codeowners": ["@lievencoghe"],["@raghavrithvik"],
   "iot_class": "local_polling"
 }
